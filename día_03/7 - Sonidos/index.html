@@ -1,5 +1,6 @@
 <!DOCTYPE html>
     <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
         <Title>Sonidos</Title>
         <style>
             audio::-webkit-media-controls-panel{
@@ -12,8 +13,8 @@
         <button onclick="comenzarTiempo()">Alarma</button>
         <h1 id="textoAlarma" style="color:red">APAGADO</h1>
 
-        <audio controls>
-            <source src="Audios/sonido.mp3" type="audio/mpeg">
+        <audio id="audioAlarma" controls>
+            <source src="Audios/alarma.mp3" type="audio/mpeg">
             Sonido no habilitado
         </audio>
 

@@ -6,7 +6,7 @@
         <title>Responde Rápido</title>
         <link rel="stylesheet" href="misEstilos.css">
     </head>
-    <body  > <!--onload="comenzarCuentaRegresiva()"-->
+    <body onload="comenzarCuentaRegresiva()" > <!--onload="comenzarCuentaRegresiva()"-->
         <div class="wrapp">
             <form>
                 <h2>Responde a las preguntas lo mas rapido que puedas </h2>
@@ -67,14 +67,31 @@
                 clearInterval(intervaloDeTiempo);
 
                 let respuestas = new Array["Amazonas", "Danubio", "Aconcagua", "Ciudad Real", "Estrecho de Bering"];
-                let contestado = new Array[];
+                let contestado = [];
 
-                let fecha = new Date();
                 let respuesta1 = document.getElementById("respuesta1").value;
                 let respuesta2 = document.getElementById("respuesta2").value;
                 let respuesta3 = document.getElementById("respuesta3").value;
                 let respuesta4 = document.getElementById("respuesta4").value;
                 let respuesta5 = document.getElementById("respuesta5").value;
+
+                contestado[0] = respuesta1; 
+                contestado[1] = respuesta2;
+                contestado[2] = respuesta3;
+                contestado[3] = respuesta4;
+                contestado[4] = respuesta5;
+
+                if(respuestas == contestado){
+                    document.getElementById("#revision").innerHTML = "Muy Bien, has contestado todas correctamente.";
+                    } else {
+                        document.getElementById("#revision").innerHTML = "Tienes una o más respuestas malas.";
+                    };
+                let fecha = new Date();
+                
+
+                
+
+                
 
                 let mensaje = fecha.toLocaleDateString("es-Es") + "\n" +
                                 "1. " + respuesta1 + "\n" +

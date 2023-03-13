@@ -1,11 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.wrapp {
+    background: papayawhip;
+    width: 80%;
+    height: 100vh;
+    margin: 1rem auto;
+}
+
+form {
+    background: salmon;
+    width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+
 }
 
 button {
     width: 180px;
     height: 50px;
-    background-color: darkkhaki;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 1px 2px 3px #808080;
+    margin-bottom: 1rem;
+}
+button.finalizar {
+    background-color: #117a8b;
+}
+
+button.reintentar {
+    background-color: #008000;
 }
 
 h2 {
@@ -15,11 +52,13 @@ h2 {
 p {
     font-weight: bold;
     font-style: italic;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
 input {
-    width: 180px;
-    height: 30px;
+    width: 50%;
+    height: 2rem;
 }
 
 #cuentaRegresiva {
@@ -27,4 +66,6 @@ input {
     border-color: red;
     border-style: solid;
     color: red;
+    padding: 0.25rem;
+    font-size: 1.5rem;
 }

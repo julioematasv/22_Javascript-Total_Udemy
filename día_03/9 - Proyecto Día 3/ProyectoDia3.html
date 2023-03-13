@@ -1,24 +1,37 @@
 <!DOCTYPE html>
+<html lang="es">
     <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Responde Rápido</title>
         <link rel="stylesheet" href="misEstilos.css">
     </head>
-    <body onload="comenzarCuentaRegresiva()">
-        <h2>Responde a las preguntas lo mas rapido que puedas <span id="cuentaRegresiva"></span></h2>
-        <p>1. Cual es la capital de Francia?</p>
-        <input type="text" id="respuesta1">
-        <p>2. (7 * 5) + 15</p>
-        <input type="text" id="respuesta2">
-        <p>3. Simbolo quimico del agua</p>
-        <input type="text" id="respuesta3">
-        <p>4. Año del descubrimiento de america</p>
-        <input type="text" id="respuesta4">
-        <p>5. Nombre de los 4 Beatles</p>
-        <input type="text" id="respuesta5">
-        <br><br>
-        <button onclick="finalizado()">Terminé!</button>
-        <br><br>
-        <button onclick="volverAIntentar()">Volver a Intentar</button>
+    <body  > <!--onload="comenzarCuentaRegresiva()"-->
+        <div class="wrapp">
+            <form>
+                <h2>Responde a las preguntas lo mas rapido que puedas </h2>
+                <h2>Tú Tiempo:
+                    <span id="cuentaRegresiva"></span></h2>
+                <p>1. ¿Cuál es el nombre de río más largo del mundo?</p>
+                <input type="text" id="respuesta1">
+                <p>2. ¿Cómo se llama el río que separa Pest de Buda?</p>
+                <input type="text" id="respuesta2">
+                <p>3. ¿Cuál es la montaña más alta del continente americano?</p>
+                <input type="text" id="respuesta3">
+                <p>4. ¿En qué provincia española está Tomelloso?</p>
+                <input type="text" id="respuesta4">
+                <p>5. ¿Cómo se llama el estrecho que separa Asia y América?</p>
+                <input type="text" id="respuesta5">
+                <br><br>
+                <p>Mensaje de revisión.</p>
+                <input type="text" id="revision">
+                <br><br>
+                <button class="finalizar" onclick="finalizado()">Terminé!</button>
+                <br><br>
+                <button class="reintentar" onclick="volverAIntentar()">Volver a
+                    Intentar</button>
+            </form>
+        </div>
 
         <audio id="audioFinal">
             <source src="gameover.mp3" type="audio/mpeg">
@@ -30,10 +43,10 @@
             let intervaloDeTiempo;
 
             function comenzarCuentaRegresiva() {
-                tiempoTerminado = setTimeout(tiempoCumplido, 30000);
+                tiempoTerminado = setTimeout(tiempoCumplido, 60000);
                 intervaloDeTiempo = setInterval(ticTac, 1000);
 
-                document.getElementById("cuentaRegresiva").textContent = 30;
+                document.getElementById("cuentaRegresiva").textContent = 60;
             }
 
             function ticTac() {
